@@ -44,23 +44,12 @@ li {
 	margin-top: 0;
 }
 
-.btn:hover {
-	background: #117bff;
-	cursor: pointer; 
-	transition: background .5s;  
+.social .container {
+	padding: 0 320px;
+	margin: 0 auto;
 }
 
-
-/* Nav */
-.nav ul {
-	margin: 0 auto; 
-	padding: 30px 0;
-	text-align: center; 
-}
-
-.social li, img{
-	display: inline;
-	text-align: center;
-	height: 60px;
-	width: 60px;
+.social img{
+	height: 50px;
+	width: 50px;
 }
