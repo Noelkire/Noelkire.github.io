@@ -7,6 +7,13 @@ body {
 	font-weight: 100;
 }
 
+ul {
+	list-style: none;
+}
+li {
+	display: inline;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 940px; 
@@ -46,46 +53,13 @@ body {
 
 /* Nav */
 .nav ul {
-	list-style: none;
 	margin: 0 auto; 
 	padding: 30px 0;
 	text-align: center; 
 }
 
-
-/* Main */
-.main .container {
-	margin: 80px auto;
-}
-
-
-/* Jumbotron */
-.jumbotron {
-	height: 600px; 
-	text-align: right;
-}
-
-.jumbotron .container {
-	position: relative;
-	top: 220px;
-}
-/* Footer */
-.footer { 
-	font-size: 14px;
-}
-
-/* Media Queries */
-@media (max-width: 500px) {
-  .header h1 {
-    font-size: 50px;
-    line-height: 64px;
-  }
-
-  .main, .jumbotron {
-    padding: 0 30px;
-  }
-
-  .main img {
-    width: 100%;
-  }
+.social li, img{
+	display: inline;
+	height: 60px;
+	width: 60px;
 }
