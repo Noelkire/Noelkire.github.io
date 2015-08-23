@@ -39,7 +39,7 @@ li {
 }
 .header p {
 	font-weight: 500;
-	letter-spacing: 8px;
+	letter-spacing: 5px;
 	margin-bottom: 40px;
 	margin-top: 0;
 }
@@ -60,6 +60,7 @@ li {
 
 .social li, img{
 	display: inline;
+	text-align: center;
 	height: 60px;
 	width: 60px;
 }
