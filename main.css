@@ -64,3 +64,9 @@ li {
 .img-circle {
     border-radius: 70%;
 }
+@media (max-width: 425px) {
+    #home {
+        background-size: 100% 14% !important; 
+        zoom:1;
+        } 
+}
