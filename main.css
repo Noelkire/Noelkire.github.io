@@ -3,8 +3,7 @@ html, body {
 	padding: 0;
 }
 body {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
+	font-size: 100px;
 }
 
 ul {
@@ -22,6 +21,7 @@ li {
 
 /* Header */
 .header {
+	font-family: 'Roboto', sans-serif;
   height: 800px;
   text-align: center; 
 }
@@ -35,7 +35,7 @@ li {
 	font-size: 120px;
 	line-height: 100px; 
 	margin-top: 0;
-	margin-bottom: 80px;
+	margin-bottom: 30px;
 }
 .header p {
 	font-weight: 500;
