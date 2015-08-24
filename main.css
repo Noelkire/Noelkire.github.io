@@ -6,13 +6,6 @@ html, body {
 body {
 }
 
-ul {
-	list-style: none;
-}
-li {
-	display: inline;
-}
-
 .container {
 	margin: 0 auto;
 	max-width: 940px; 
@@ -35,7 +28,7 @@ li {
 .header .container {
 	position: relative;
 	top: 100px;
-	padding: 0 10px; 
+	padding: 0 10px;
 }
 
 .header h1 {
@@ -50,17 +43,4 @@ li {
 	letter-spacing: 5px;
 	margin-bottom: 40px;
 	margin-top: 20px;
-}
-
-.social .container {
-	padding: 0 360px;
-	margin: 0 auto;
-}
-
-.social img{
-	height: 50px;
-	width: 50px;
-}
-.img-center {
-	margin: 0 auto;
 }
