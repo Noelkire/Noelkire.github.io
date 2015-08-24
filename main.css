@@ -1,4 +1,5 @@
 html, body {
+	color: #EEE9E9;
 	margin: 0;
 	padding: 0;
 }
@@ -15,11 +16,17 @@ li {
 .container {
 	margin: 0 auto;
 	max-width: 940px; 
-	padding: 0 10px; 
 }
 
 /* Header */
 .header {
+	background-image: url('https://36.media.tumblr.com/fea3b7693ffaa324c85ccd4145994caa/tumblr_ntfprdMcKx1s7hww7o1_1280.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	font-family: 'Lobster', cursive;
   	height: 800px;
   	text-align: center; 
@@ -28,15 +35,17 @@ li {
 .header .container {
 	position: relative;
 	top: 100px;
+	padding: 0 10px; 
 }
 
 .header h1 {
 	font-size: 120px;
 	line-height: 100px; 
 	margin-top: 0;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .header p {
+	color: black;
 	font-weight: 500;
 	letter-spacing: 5px;
 	margin-bottom: 40px;
@@ -51,4 +60,7 @@ li {
 .social img{
 	height: 50px;
 	width: 50px;
+}
+.img-circle {
+    border-radius: 70%;
 }
