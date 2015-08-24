@@ -61,12 +61,6 @@ li {
 	height: 50px;
 	width: 50px;
 }
-.img-circle {
-    border-radius: 70%;
-}
-@media (max-width: 425px) {
-    #home {
-        background-size: 100% 14% !important; 
-        zoom:1;
-        } 
+.img-center {
+	margin: 0 auto;
 }
