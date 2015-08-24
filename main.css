@@ -1,5 +1,5 @@
 html, body {
-	color: #EEE9E9;
+	color: #262626;
 	margin: 0;
 	padding: 0;
 }
@@ -13,7 +13,7 @@ body {
 
 /* Header */
 .header {
-	background-image: url('https://36.media.tumblr.com/fea3b7693ffaa324c85ccd4145994caa/tumblr_ntfprdMcKx1s7hww7o1_1280.jpg');
+	background-image: url('https://i.imgur.com/fIrl8mr.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
