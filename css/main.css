@@ -1,0 +1,46 @@
+html, body {
+	color: #262626;
+	margin: 0;
+	padding: 0;
+}
+body {
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 940px; 
+}
+
+/* Header */
+.header {
+	background-image: url('https://i.imgur.com/fIrl8mr.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: 'Lobster', cursive;
+  	height: 800px;
+  	text-align: center; 
+}
+
+.header .container {
+	position: relative;
+	top: 100px;
+	padding: 0 10px;
+}
+
+.header h1 {
+	font-size: 120px;
+	line-height: 100px; 
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+.header p {
+	color: black;
+	font-weight: 500;
+	letter-spacing: 5px;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
