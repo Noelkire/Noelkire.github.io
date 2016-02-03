@@ -17,9 +17,9 @@
 @-webkit-keyframes blink { 50% { color: transparent; } }
 */
 
-#name {
+h1 {
     font-family:'ERIKLEON';
-    font-size: 300px;
+    font-size: 100px;
     color: black;
     text-align: center;
     position: relative;
@@ -29,7 +29,7 @@
 
 @media(min-width:768px) {
     h1 {
-        
+        font-size: 200px;
     }
 }
 
