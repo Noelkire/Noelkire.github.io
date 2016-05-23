@@ -8,6 +8,10 @@
 @keyframes blink { 50% { color: transparent; } }
 @-webkit-keyframes blink { 50% { color: transparent; } }
 */
+#social_icon{
+    height:40px;
+    width:40px;
+}
 .navbar-inverse {
     background-color: white;
     border-color: black;
@@ -102,13 +106,13 @@ a {
     padding: 100px 0;
     text-align: center;
     color: black;
-    background: url(/img/back.jpeg) no-repeat bottom center scroll;
     background-color: white;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
 
 .intro .intro-body {
     display: table-cell;
