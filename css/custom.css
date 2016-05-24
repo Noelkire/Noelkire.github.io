@@ -1,13 +1,83 @@
-/*blinking animation using CSS
-.blink {
-    display: inline;
-    color: inherit;
-    animation: blink 1s steps(1) infinite;
-    -webkit-animation: blink 1s steps(1) infinite;
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
-@keyframes blink { 50% { color: transparent; } }
-@-webkit-keyframes blink { 50% { color: transparent; } }
-*/
+
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+
 .embed-video {
     position: relative;
     width: 100%;
@@ -21,30 +91,32 @@
     width: 100%;
     height: 100%;
 }
-
-
 #social_icon{
     height:40px;
     width:40px;
 }
 .navbar-inverse {
     background-color: white;
-    border-color: black;
+    border-color: white;
 }
 .navbar-inverse .navbar-nav>li>a {
     color: black;
 }
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: green;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: white;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+}
 
-#brand {
-    font-family: "ERIKLEON";
-}
-.brand-menu {
-    font-size: 25px;
+.navbar-inverse .navbar-toggle .icon-bar:hover {
+    background-color: white;
+
 }
 
-.glyphicon {
-    font-size: 15px;
-}
 body {
     width: 100%;
     height: 100%;
@@ -89,9 +161,8 @@ h6 {
 
 a {
     color: #42dca3;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    font-family: "ERIKLEON";
+    font-size: 20px;
 }
 .navbar-toggle {
     position: relative;
@@ -102,8 +173,6 @@ a {
     margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
 }
 @media (min-width: 768px) {
     .navbar .navbar-nav {
