@@ -1,77 +1,14 @@
-hr {
-  height: .25rem;
-  width: 22%;
-  margin: 0;
-  background: black;
-  border: none;
-  transition: .3s ease-in-out;
-}
-.two:hover ~ hr {
-  margin-left: 22%;
-}
-
-.three:hover ~ hr {
-  margin-left: 48%;
-}
-
-.four:hover ~ hr {
-  margin-left: 73%;
-}
-
-.embed-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-}
-.videoWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-#social_icon{
-    height:40px;
-    width:40px;
-}
-.navbar-inverse {
-    background-color: white;
-    border-color: white;
-}
-.navbar-inverse .navbar-nav>li>a {
-    color: black;
-}
-/*
-.navbar-inverse .navbar-nav>li>a:hover {
-    color: white;
-    background-color: black;
-}
-*/
-.navbar-inverse .navbar-toggle {
-    border-color: white;
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-    background-color: black;
-}
-
-.navbar-inverse .navbar-toggle .icon-bar:hover {
-    background-color: white;
-
-}
-
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: black;
+    font-family: Menlo,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #efefef;
 }
 
 html {
     width: 100%;
     height: 100%;
 }
-s
 h1,
 h2,
 h3,
@@ -79,9 +16,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: Menlo,"Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: 1px;
 }
 
@@ -101,75 +36,33 @@ h6 {
         line-height: 1.6;
     }
 }
-
-a {
-    color: #42dca3;
-    font-family: "ERIKLEON";
-    font-size: 20px;
+.jumbotron {
+    display: flex;
+    align-items: center;
+    background-color: #efefef;
+    color: #ffffff;
+    height: 600px;
 }
-.navbar-toggle {
-    position: relative;
-    float: left;
-    padding: 9px 10px;
-    margin-top: 8px;
-    margin-right: 15px;
-    margin-bottom: 8px;
-    background-color: transparent;
-    background-image: none;
+.jumbotron h1 {
+  font-size: 100px;
+  text-align: center;
+  margin: 0;
+  color: #2e2e2e;
 }
-@media (min-width: 768px) {
-    .navbar .navbar-nav {
-        display: inline-block;
-        float:none;
-    }
-    .navbar .navbar-collapse {
-        text-align: center;
-        padding-bottom: 5px;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 5px;
-    }
+.jumbotron h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  color: #6e6e6e;
 }
-.intro {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: black;
-    background-color: white;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+.jumbotron ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
 }
-
-
-.intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
+.jumbotron li{
+    display:inline;
 }
-
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
-}
-
-@media(min-width:768px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-
-    .intro .intro-body .brand-heading {
-        font-size: 100px;
-    }
-
-    .intro .intro-body .intro-text {
-        font-size: 26px;
-    }
+.jumbotron img{
+    width: 50px;
 }
