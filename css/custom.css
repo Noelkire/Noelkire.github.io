@@ -28,14 +28,6 @@ p {
 h6 {
     font-size: 5px
 }
-
-@media(min-width:768px) {
-    p {
-        margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-}
 .jumbotron {
     display: flex;
     align-items: center;
@@ -65,4 +57,15 @@ h6 {
 }
 .jumbotron img{
     width: 50px;
+}
+@media(max-width:768px) {
+    .jumbotron h1 {
+        font-size: 50px
+    }
+      .jumbotron h2 {
+        font-size: 10px
+    }
+      .jumbotron img {
+        width: 25px
+    }
 }
