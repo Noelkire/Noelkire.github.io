@@ -79,8 +79,9 @@ h6 {
 }
 @media(max-width:768px) {
   .photoflow {
-    width:200px;
+    width:300px;
     margin: 0 auto;
+    
   }
 }
 /* ANIMATIONS */
