@@ -72,6 +72,11 @@ h6 {
         width: 25px
     }
 }
+
+.photoflow {
+  width: 500px;
+  margin: 0 auto;
+}
 /* ANIMATIONS */
 #erikleon {
   position:relative;
