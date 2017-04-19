@@ -3,7 +3,7 @@ body {
     width: 100%;
     height: auto;
     font-family: Menlo,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #E3E4E5;
+    background-color: #909090;
 }
 
 html {
@@ -46,7 +46,7 @@ h6 {
   letter-spacing: 5px;
   font-weight: bold;
   text-transform: uppercase;
-  color: red;
+  color: white;
   margin: 0px;
   text-align: center;
 }
@@ -117,13 +117,10 @@ h6 {
   }
 }
 .thumbnail {
-  display: block;
-  padding: 30px;
-  margin-bottom: 20px;
+	background-color: transparent;
   line-height: 1.42857143;
-  background-color: #E3E4E5;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 2px solid transparent;
+	margin: 20px;
   -webkit-transition: border .2s ease-in-out;
        -o-transition: border .2s ease-in-out;
           transition: border .2s ease-in-out;
@@ -136,29 +133,35 @@ h6 {
   border: 0px solid transparent;
 }
 .navbar-inverse {
-	background-color: transparent;
+	background-color: #333333;
 	
 }
 .navbar-inverse .navbar-nav>li>a {
-	color: #000;
+	color: #FFF;
 }
 .navbar-brand {
-  float: left;
-  height: 50px;
-  line-height: 30px;
-  font-size: 30px;
-  letter-spacing: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
+	float: left;
+	height: 50px;
+	line-height: 10px;
+	display:inline-block;
+	margin: 0 auto;
+	padding:10px 10px;
 }
 
+@media (min-width: 768px) {
+	.navbar .navbar-nav {
+		display: inline-block;
+		float: none;
+	}
+	.navbar .navbar-collapse {
+		text-align: center;
+	}
+}
 
-
-
-
-
-
-
-
+@media (min-width: 768px) {
+	.navbar {
+		border-radius: 0px;
+	}
+}
 
 
