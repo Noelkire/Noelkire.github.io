@@ -5,7 +5,6 @@ body {
     font-family: Menlo,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #909090;
 }
-
 html {
     width: 100%;
     height: 100%;
@@ -93,14 +92,6 @@ h6 {
   }
 }
 
-#erikleon {
-  font-size: 80px;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 8px
-}
-
 #description {
   position:relative;
   animation: slide 2.5s;
@@ -128,9 +119,13 @@ h6 {
 
 .navbar {
   position: relative;
-  min-height: 50px;
-  margin-bottom: 50px;
+  min-height: 45px;
+  margin-bottom: 0px;
   border: 0px solid transparent;
+}
+.navbar-nav>li>a {
+	padding-top: 14px;
+	padding-bottom: 6px;
 }
 .navbar-inverse {
 	background-color: #333333;
@@ -140,12 +135,11 @@ h6 {
 	color: #FFF;
 }
 .navbar-brand {
-	float: left;
-	height: 50px;
-	line-height: 10px;
-	display:inline-block;
+	float: none;
+	padding: 0px;
 	margin: 0 auto;
-	padding:10px 10px;
+	height: 30px;
+	text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -162,6 +156,11 @@ h6 {
 	.navbar {
 		border-radius: 0px;
 	}
+}
+.navbar-header {
+    float: left;
+    text-align: center;
+    width: 100%;
 }
 
 
