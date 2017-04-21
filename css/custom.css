@@ -3,7 +3,8 @@ body {
     width: 100%;
     height: auto;
     font-family: Menlo,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #909090;
+    background-color: #000000;
+	padding-bottom: 30px;
 }
 html {
     width: 100%;
@@ -32,6 +33,8 @@ p {
 h6 {
     font-size: 5px
 }
+
+
 /* Jumbotron Stylings */
 .jumbotron {
     display: flex;
@@ -45,23 +48,33 @@ h6 {
   letter-spacing: 5px;
   font-weight: bold;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   margin: 0px;
   text-align: center;
+}
+.jumbotron h1:after {
+	display: block;
+	content: '';
+	width: 100%;
+	height: 6px;
+	background: #c62424;
+	margin-top: -4px;
 }
 .jumbotron h2 {
   font-size: 25px;
   text-align: center;
   margin: 0;
-  color: #6e6e6e;
+  color: #fff;
 }
 .jumbotron ul {
     list-style-type: none;
     margin-top: 20px;
     padding: 0;
+	color: #fff;
+	margin-left: 40px;
 }
 .jumbotron li{
-    display:inline;
+    display:block;
 }
 .jumbotron img{
     width: 50px;
@@ -69,7 +82,7 @@ h6 {
 /* Media Query for responsive design */
 @media(max-width:768px) {
     .jumbotron h1 {
-        font-size: 30px;
+        font-size:40px;
 
     }
       .jumbotron h2 {
@@ -80,6 +93,7 @@ h6 {
     }
 }
 
+/*Photo styling*/
 .photoflow {
   width: 500px;
   margin: 0 auto;
@@ -117,12 +131,16 @@ h6 {
           transition: border .2s ease-in-out;
 }
 
-.navbar {
-  position: relative;
-  min-height: 45px;
-  margin-bottom: 0px;
-  border: 0px solid transparent;
+/*Navigation Bar*/
+@media (min-width: 768px) {
+	.navbar {
+		position: relative;
+		min-height: 45px;
+  		margin-bottom: 0px;
+  		border: 0px solid transparent;
+	}
 }
+
 .navbar-nav>li>a {
 	padding-top: 14px;
 	padding-bottom: 6px;
@@ -139,17 +157,6 @@ h6 {
 	padding: 0px;
 	margin: 0 auto;
 	height: 30px;
-	text-align: center;
-}
-
-@media (min-width: 768px) {
-	.navbar .navbar-nav {
-		display: inline-block;
-		float: none;
-	}
-	.navbar .navbar-collapse {
-		text-align: center;
-	}
 }
 
 @media (min-width: 768px) {
@@ -162,5 +169,4 @@ h6 {
     text-align: center;
     width: 100%;
 }
-
 
