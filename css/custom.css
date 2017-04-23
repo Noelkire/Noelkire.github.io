@@ -2,8 +2,8 @@
 body {
     width: 100%;
     height: auto;
-    font-family: Menlo,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000000;
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    background-color: #141414;
 	padding-bottom: 30px;
 }
 html {
@@ -17,7 +17,6 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    font-family: Arial,Menlo,"Helvetica Neue",Helvetica,sans-serif;
     letter-spacing: 1px;
 }
 h2 {
@@ -38,61 +37,58 @@ h6 {
 /* Jumbotron Stylings */
 .jumbotron {
     display: flex;
-    align-items: center;
     background-color: transparent;
     height: 600px;
     overflow: hidden;
+	padding-top: 200px;
 }
 .jumbotron h1 {
-  font-size: 90px;
-  letter-spacing: 5px;
+  font-size: 55px;
+  letter-spacing: -2px;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
   margin: 0px;
-  text-align: center;
+  text-align: left;
 }
 .name h1:after {
 	display: block;
 	content: '';
-	margin: 0 auto;
-	width: 60%;
-	height: 15px;
+	width: 340px;
+	height: 10px;
 	background: #c62424;
-}
-
-.jumbotron h2 {
-  font-size: 50px;
-  text-align: center;
-  margin: 0;
-  color: #fff;
 }
 .jumbotron ul {
     list-style-type: none;
     margin-top: 20px;
-	font-size: 30px;
+	font-size: 20px;
+	font-weight: bold;
     padding: 0;
 	color: #fff;
 	text-align: left;
-	font-family: Arial,Menlo,"Helvetica Neue",Helvetica,sans-serif;
-    letter-spacing: 1px;
+	margin-left: 160px;
 	
 }/* create a div block that will be cntered so that text can be aligned in the box to the right*/
 .jumbotron img{
     width: 50px;
 }
 /* Media Query for responsive design */
-@media(max-width:768px) {
+@media(min-width:768px) {
     .jumbotron h1 {
-        font-size:50px;
-
+        font-size:100px
     }
-      .jumbotron li {
-        font-size: 20px;
+      .jumbotron ul {
+        font-size: 40px;
+		margin-left: 275px;
     }
       .jumbotron img {
         width: 25px
     }
+	.name h1:after {
+		width: 650px;
+		height: 20px;
+	}
+	
 }
 
 /*Photo styling*/
@@ -100,7 +96,7 @@ h6 {
   width: 500px;
   margin: 0 auto;
 }
-@media(max-width:768px) {
+@media(min-width:768px) {
   .photoflow {
     width:300px;
     margin: 0 auto;
@@ -134,17 +130,69 @@ h6 {
 }
 
 /*Navigation Bar*/
+.navbar-default {
+	background-color: #e5e5e5;
+}
 .navbar-default .navbar-nav>li>a {
-	color: #000;
+	color: #494949;
+	font-size: 20px;
 }
-.navbar-nav>li>a {
-	padding-top: 14px;
-	padding-bottom: 6px;
+	.navbar-default .navbar-nav>li>a {
+	color: #494949;
+	font-size: 10px;
+	font-weight: bold;
+}
+	.navbar-default .navbar-nav>li>a:hover {
+	color: #c62424;
+}
+.nav > li {
+	display: inline-block;
+}
+.navbar-collapse {
+	position: relative;
+	float: left;
+	background-color: transparent;
+	background-image: none;
+	border: transparent;
+	width:82px;
+}
+@media (min-width: 768px) {
+	.navbar-default .navbar-nav>li>a {
+	font-size: 20px;
+}
+	.navbar-nav>li>a {
+	padding-top: 15px;
+	margin-right: 40px;
 	right: 20px;
+	font-weight: bold;
 }
-.navbar-inverse {
-	background-color: #333333;
-	
+}
+.glyphicon {
+	font-size: 25px;
+}
+.glyphicon:hover {
+	color: #c62424
+}
+@media (min-width: 768px) {
+	.navbar {
+		border-radius: 0px;
+	}
+}
+/*
+.navbar-default {
+	background-color: #e5e5e5;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #494949;
+	font-size: 20px;
+}
+
+.navbar-nav>li>a {
+	padding-top: 15px;
+	margin-right: 40px;
+	right: 20px;
+	color: red;
+	font-weight: bold;
 }
 .navbar-brand {
 	float: none;
@@ -152,15 +200,11 @@ h6 {
 	margin: 0 auto;
 	height: 30px;
 }
-
+.glyphicon {
+	font-size: 25px;
+}
 @media (min-width: 768px) {
 	.navbar {
 		border-radius: 0px;
 	}
 }
-.navbar-header {
-    float: left;
-    text-align: center;
-    width: 100%;
-}
-
