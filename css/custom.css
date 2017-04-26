@@ -136,3 +136,30 @@ h6 {
 .navbar .navbar-collapse {
     text-align: center;
 }
+
+.popover {		
+	background-color: transparent;
+}
+.popover-title {
+	display: none;
+}
+.popover-content {
+	padding: 0px;
+	width: 100px;
+}
+.popover img {
+	width: 100px;
+}
+.popover.bottom>.arrow {
+	top: -8px;
+}
+.popover.bottom>.arrow:after {
+	border-bottom-color: #fffc00;
+}
+
+.social-icons, .social-icons:hover{
+	margin: 0 auto;
+	width: 70px;
+	background-color: transparent;
+	border-color: transparent;
+}

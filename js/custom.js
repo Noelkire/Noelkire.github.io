@@ -28,4 +28,7 @@ $('.navbar-collapse ul li a').click(function() {
   }
 });
 
-document.getElementById("navigationText").innerHTML = "Gallery";
+//document.getElementById("navigationText").innerHTML = "Gallery";
+
+var image = '<img src="img/snap_code.svg">';
+$('#popover').popover({placement: 'bottom', content: image, html: true});
