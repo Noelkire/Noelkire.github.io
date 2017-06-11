@@ -51,6 +51,7 @@ h6 {
   margin: 0px;
   text-align: left;
 }
+/*
 .name h1:after {
 	display: block;
 	content: '';
@@ -58,6 +59,7 @@ h6 {
 	height: 10px;
 	background: #c62424;
 }
+*/
 .jumbotron ul {
     list-style-type: none;
     margin-top: 20px;
