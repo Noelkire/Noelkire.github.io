@@ -157,9 +157,7 @@ h6 {
 .popover.bottom>.arrow:after {
 	border-bottom-color: #fffc00;
 }
-
-@media(min-width:768px) {
-	.social-icons {
+.social-icons {
 		text-align: center;
 	}
 	.social-icons ul{
@@ -174,4 +172,3 @@ h6 {
 		display: block;
 		width:50px;
 	}
-}
