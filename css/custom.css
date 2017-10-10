@@ -158,22 +158,21 @@ h6 {
 	border-bottom-color: #fffc00;
 }
 
-.social-icons, .social-icons:hover{
-	margin: 0 auto;
-	width: 50px;
-	background-color: transparent;
-	border-color: transparent;
-}
 @media(min-width:768px) {
+	.social-icons {
+		text-align: center;
+	}
+}
 	.social-icons ul{
-		list-style-type: none;
+		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
-	.social-icons ul{
-		display: block;
+	.social-icons li {
+		display:inline-block;
 	}
-	.social-icons img{
-		height: 50px;
+	.social-icons img {
+		display: block;
+		width:50px;
 	}
 }
