@@ -42,6 +42,10 @@ h6 {
     overflow: hidden;
 	padding-top: 200px;
 }
+
+.siteIntro {
+	padding-top: 0px;
+}
 .jumbotron h1 {
   font-size: 55px;
   letter-spacing: -2px;
