@@ -46,7 +46,6 @@ h6 {
   font-size: 55px;
   letter-spacing: -2px;
   font-weight: bold;
-  text-transform: uppercase;
   color: #222222;
   margin: 0px;
   text-align: left;
@@ -63,7 +62,7 @@ h6 {
 .jumbotron ul {
     list-style-type: none;
     margin-top: 20px;
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: bold;
     padding: 0;
 	color: #222222;
@@ -76,7 +75,7 @@ h6 {
 /* Media Query for responsive design */
 @media(min-width:768px) {
     .jumbotron h1 {
-        font-size:80px;
+        font-size:100px;
 		text-align: center;
     }
       .jumbotron ul {
@@ -170,5 +169,5 @@ h6 {
 	}
 	.social-icons img {
 		display: block;
-		width:50px;
+		width:70px;
 	}
