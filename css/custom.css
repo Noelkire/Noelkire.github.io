@@ -67,6 +67,9 @@ h6 {
 #titleText {
 	padding-top: 200px;
 }
+#aboutmee {
+	color: #ffffff;
+}
 /* Media Query for responsive design */
 @media(min-width:768px) {
     .jumbotron h1 {
