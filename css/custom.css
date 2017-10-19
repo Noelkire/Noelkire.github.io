@@ -39,28 +39,18 @@ h6 {
     background-color: transparent;
     height: 600px;
     overflow: hidden;
-	padding-top: 200px;
 }
 
 .siteIntro {
 	padding-top: 0px;
 }
 .jumbotron h1 {
-  font-size: 55px;
+  font-size: 60px;
   letter-spacing: -2px;
   font-weight: bold;
   margin: 0px;
-  text-align: left;
+	text-align: center;
 }
-/*
-.name h1:after {
-	display: block;
-	content: '';
-	width: 340px;
-	height: 10px;
-	background: #c62424;
-}
-*/
 .jumbotron ul {
     list-style-type: none;
     margin-top: 20px;
@@ -74,11 +64,13 @@ h6 {
 .jumbotron img{
     width: 50px;
 }
+#titleText {
+	padding-top: 200px;
+}
 /* Media Query for responsive design */
 @media(min-width:768px) {
     .jumbotron h1 {
         font-size:100px;
-		text-align: center;
     }
     .jumbotron ul {
         font-size: 30px;
@@ -86,10 +78,6 @@ h6 {
     .jumbotron img {
         width: 25px
     }
-	.name h1:after {
-		width: 550px;
-		height: 20px;
-	}
 	
 }
 

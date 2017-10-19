@@ -5,5 +5,6 @@ $(document).ready(function() {
 				anchors: ['firstPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
 				menu: '#menu',
 				scrollingSpeed: 1000,
+				responsiveWidth: 900,
 			});
 		});
