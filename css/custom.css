@@ -41,8 +41,8 @@ h6 {
     overflow: hidden;
 }
 
-.siteIntro {
-	padding-top: 0px;
+#siteIntro {
+	padding-top: 200px;
 }
 .jumbotron h1 {
   font-size: 60px;
@@ -54,7 +54,7 @@ h6 {
 .jumbotron ul {
     list-style-type: none;
     margin-top: 20px;
-	font-size: 30px;
+	font-size: 15px;
 	font-weight: bold;
     padding: 0;
 	color: #222222;
@@ -64,8 +64,11 @@ h6 {
 .jumbotron img{
     width: 50px;
 }
-#titleText {
-	padding-top: 200px;
+.evenSection {
+	color: #e5e5e5
+}
+.oddSection {
+	color: #222222
 }
 #aboutmee {
 	color: #ffffff;
@@ -76,7 +79,7 @@ h6 {
         font-size:100px;
     }
     .jumbotron ul {
-        font-size: 30px;
+        font-size: 25px;
     }
     .jumbotron img {
         width: 25px
@@ -200,10 +203,4 @@ h6 {
 	margin-top: 400px;
 	font-size: 15px;
 	font-weight: bold;
-}
-.oddTitle{
-	color: #e2e2e2;
-}
-.evenTitle{
-	color:#222222;
 }
