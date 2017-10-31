@@ -1,7 +1,7 @@
 $(document).ready(function() {
 			"use strict";
 			$('#fullpage').fullpage({
-				sectionsColor: ['#e5e5e5', '#222222', '#e5e5e5', '#222222', '#e5e5e5'],
+				sectionsColor: ['#f7f7f7', '#222222', '#f7f7f7', '#222222', '#f7f7f7'],
 				anchors: ['firstPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
 				lockAnchors: true,
 				menu: '#menu',
