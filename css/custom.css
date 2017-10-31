@@ -57,21 +57,17 @@ h6 {
 	font-size: 15px;
 	font-weight: bold;
     padding: 0;
-	color: #222222;
 	text-align: center;
-	
-}/* create a div block that will be cntered so that text can be aligned in the box to the right*/
+}
+/* create a div block that will be cntered so that text can be aligned in the box to the right*/
 .jumbotron img{
     width: 50px;
 }
-.evenSection {
-	color: #e5e5e5
+.evenSection{
+	color: #e5e5e5;
 }
-.oddSection {
-	color: #222222
-}
-#aboutmee {
-	color: #ffffff;
+.oddSection{
+	color: #222222;
 }
 /* Media Query for responsive design */
 @media(min-width:768px) {
