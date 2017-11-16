@@ -32,6 +32,19 @@ h6 {
     font-size: 5px
 }
 
+/* Section Styling */
+.secContent {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.oddSection{
+  color:#000000;
+  background-color: #ffffff;
+}
+.evenSection{
+  color: #ffffff;
+  background-color: #000000;
+}
 
 /* Jumbotron Stylings */
 .jumbotron {
@@ -39,10 +52,6 @@ h6 {
     background-color: transparent;
     height: 600px;
     overflow: hidden;
-}
-
-#siteIntro {
-	padding-top: 200px;
 }
 .jumbotron h1 {
   font-size: 60px;
@@ -63,12 +72,7 @@ h6 {
 .jumbotron img{
     width: 50px;
 }
-.evenSection{
-	color: #f7f7f7;
-}
-.oddSection{
-	color: #000000;
-}
+
 /* Media Query for responsive design */
 @media(min-width:768px) {
     .jumbotron h1 {
@@ -80,7 +84,7 @@ h6 {
     .jumbotron img {
         width: 25px
     }
-	
+
 }
 
 /*Photo styling*/
@@ -92,7 +96,7 @@ h6 {
   .photoflow {
     width:300px;
     margin: 0 auto;
-    
+
   }
 }
 
@@ -105,7 +109,7 @@ h6 {
   from{
     top:50px;
     opacity:0;
-  } 
+  }
   to{
     top:0px;
     opacity:1;
@@ -129,7 +133,7 @@ h6 {
     text-align: center;
 }
 
-.popover {		
+.popover {
 	background-color: transparent;
 }
 .popover-title {
