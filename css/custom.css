@@ -155,7 +155,7 @@ h6 {
 
 .social-icons {
 		text-align: center;
-    animation: float 6s ease-in-out infinite;
+    /*animation: float 6s ease-in-out infinite;*/
 	}
 	.social-icons ul{
 		list-style: none;
