@@ -3,7 +3,8 @@ body {
     width: 100%;
     height: auto;
     font-family: "Helvetica Neue",Helvetica,sans-serif;
-	padding-bottom: 30px;
+    padding-bottom: 30px;
+    background-color: #252422;
 }
 html {
     width: 100%;
@@ -17,6 +18,7 @@ h5,
 h6 {
     margin: 0 0 35px;
     letter-spacing: 1px;
+    color: white;
 }
 h2 {
   text-align: left;
@@ -37,15 +39,6 @@ h6 {
   padding-top: 150px;
   padding-bottom: 150px;
 }
-.oddSection{
-  color:#000000;
-  background-color: #ffffff;
-}
-.evenSection{
-  color: #ffffff;
-  background-color: #000000;
-}
-
 /* Jumbotron Stylings */
 .jumbotron {
     display: flex;
@@ -60,6 +53,10 @@ h6 {
   margin: 0px;
 	text-align: center;
 }
+.jumbotron h2{
+  text-align: center;
+  font-size: 10px;
+}
 .jumbotron ul {
     list-style-type: none;
     margin-top: 20px;
@@ -73,19 +70,7 @@ h6 {
     width: 50px;
 }
 
-/* Media Query for responsive design */
-@media(min-width:768px) {
-    .jumbotron h1 {
-        font-size:100px;
-    }
-    .jumbotron ul {
-        font-size: 25px;
-    }
-    .jumbotron img {
-        width: 25px
-    }
 
-}
 
 /*Photo styling*/
 .photoflow {
@@ -167,7 +152,7 @@ h6 {
 	}
 	.social-icons img {
 		display: block;
-		width:70px;
+		width: 20px;
 	}
 
 
@@ -219,6 +204,31 @@ h6 {
 	height: 100px;
 	background: red;
   animation: float 6s ease-in-out infinite;
+}
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* Media Query for responsive design */
+@media(min-width:768px) {
+    .jumbotron h1 {
+        font-size:100px;
+    }
+    .jumbotron h2 {
+      font-size: 30px;
+    }
+    .jumbotron ul {
+        font-size: 25px;
+    }
+    .jumbotron img {
+        width: 25px
+    }
+    .social-icons img {
+      width: 50px;
+    }
+
 }
 
 @keyframes float {
