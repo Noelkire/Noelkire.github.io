@@ -1,14 +1,15 @@
 /* General Styling */
 body {
     width: 100%;
-    height: auto;
+    min-height: 100%;
     font-family: "Helvetica Neue",Helvetica,sans-serif;
-    padding-bottom: 30px;
-    background-color: #252422;
+    background-color: #0C0809;
+    margin: 0;
 }
 html {
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 h1,
 h2,
@@ -16,15 +17,8 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 35px;
-    letter-spacing: 1px;
     color: white;
 }
-h2 {
-  text-align: left;
-  padding-left: 40px;
-}
-
 p {
     margin: 0 0 25px;
     font-size: 18px;
@@ -34,28 +28,28 @@ h6 {
     font-size: 5px
 }
 
-/* Section Styling */
-.secContent {
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
 /* Jumbotron Stylings */
 .jumbotron {
     display: flex;
     background-color: transparent;
     height: 600px;
     overflow: hidden;
+    margin-top: 300px;
+}
+span {
+    border-bottom: 2px solid white;
 }
 .jumbotron h1 {
-  font-size: 60px;
-  letter-spacing: -2px;
-  font-weight: bold;
+  font-size: 40px;
+  font-weight: lighter;
   margin: 0px;
 	text-align: center;
 }
 .jumbotron h2{
   text-align: center;
-  font-size: 10px;
+  color: orange;
+  font-size: 20px;
+  font-weight: lighter;
 }
 .jumbotron ul {
     list-style-type: none;
@@ -65,13 +59,6 @@ h6 {
     padding: 0;
 	text-align: center;
 }
-/* create a div block that will be cntered so that text can be aligned in the box to the right*/
-.jumbotron img{
-    width: 50px;
-}
-
-
-
 /*Photo styling*/
 .photoflow {
   width: 500px;
@@ -117,41 +104,22 @@ h6 {
 .navbar .navbar-collapse {
     text-align: center;
 }
-
-.popover {
-	background-color: transparent;
-}
-.popover-title {
-	display: none;
-}
-.popover-content {
-	padding: 0px;
-	width: 100px;
-}
-.popover img {
-	width: 100px;
-}
-.popover.bottom>.arrow {
-	top: -8px;
-}
-.popover.bottom>.arrow:after {
-	border-bottom-color: #fffc00;
-}
-
 .social-icons {
 		text-align: center;
     /*animation: float 6s ease-in-out infinite;*/
 	}
 	.social-icons ul{
 		list-style: none;
-		margin: 0;
-		padding: 0;
+		margin: 15px;
+    padding: 0;
 	}
 	.social-icons li {
 		display:inline-block;
 	}
 	.social-icons img {
 		display: block;
+    margin-left: 8px;
+    margin-right: 8px;
 		width: 20px;
 	}
 
@@ -214,7 +182,7 @@ h6 {
 /* Media Query for responsive design */
 @media(min-width:768px) {
     .jumbotron h1 {
-        font-size:100px;
+        font-size:60px;
     }
     .jumbotron h2 {
       font-size: 30px;
@@ -226,7 +194,7 @@ h6 {
         width: 25px
     }
     .social-icons img {
-      width: 50px;
+      width: 35px;
     }
 
 }
