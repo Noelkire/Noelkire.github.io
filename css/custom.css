@@ -59,24 +59,13 @@ span {
     padding: 0;
 	text-align: center;
 }
-/*Photo styling*/
-.photoflow {
-  width: 500px;
-  margin: 0 auto;
-}
-@media(min-width:768px) {
-  .photoflow {
-    width:300px;
-    margin: 0 auto;
-
-  }
-}
 
 #description {
   position:relative;
   animation: slide 2.5s;
   animation-delay: 2s;
 }
+
 @-webkit-keyframes slide{
   from{
     top:50px;
@@ -87,6 +76,7 @@ span {
     opacity:1;
   }
 }
+
 .thumbnail {
 	background-color: transparent;
   line-height: 1.42857143;
@@ -158,6 +148,7 @@ span {
 	font-size: 15px;
 	font-weight: bold;
 }
+
 .shape {
   height: 150px;
   width: 150px;
