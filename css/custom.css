@@ -1,4 +1,4 @@
-/* General Styling */
+/* General/Global Styling */
 body {
     width: 100%;
     min-height: 100%;
@@ -27,23 +27,27 @@ h6 {
     font-size: 5px
 }
 
+/* Underline */
+span {
+    border-bottom: 2px solid white;
+}
+
 /* Jumbotron Stylings */
 .jumbotron {
     display: flex;
     background-color: transparent;
-    height: 600px;
+    background: none;
+    height: 100vh;
     overflow: hidden;
     margin-top: 200px;
 }
-span {
-    border-bottom: 2px solid white;
-}
 .jumbotron h1 {
-  font-size: 40px;
-  font-weight: 100;
-  letter-spacing: 0px;
-  margin: 0px;
-	text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 0px;
+    margin: 0px;
+    text-align: center;
+    animation: fade 4s;
 }
 .jumbotron h2{
   text-align: center;
@@ -59,14 +63,25 @@ span {
     padding: 0;
 	text-align: center;
 }
-
-#description {
-  position:relative;
-  animation: slide 2.5s;
-  animation-delay: 2s;
+.jumbotron a {
+    color: #FF7E1F;
+    font-weight: 100;  
+}
+/* Projects Section Styling */
+.projects {
+    height: 100vh;
+    text-align: center;
 }
 
-@-webkit-keyframes slide{
+
+/* About Section Styling */
+.about {
+    height: 100vh;
+    text-align: center;
+}
+
+
+@-webkit-keyframes fade{
   from{
     top:50px;
     opacity:0;
@@ -86,84 +101,30 @@ span {
        -o-transition: border .2s ease-in-out;
           transition: border .2s ease-in-out;
 }
-.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-}
-
-.navbar .navbar-collapse {
-    text-align: center;
-}
 .social-icons {
-		text-align: center;
+    text-align: center;
     /*animation: float 6s ease-in-out infinite;*/
-	}
-	.social-icons ul{
-		list-style: none;
-		margin: 15px;
+    animation: fade 10s;
+}
+.social-icons ul{
+    list-style: none;
+    margin:15px;
     padding: 0;
-	}
-	.social-icons li {
-		display:inline-block;
-	}
-	.social-icons img {
-		display: block;
+}
+.social-icons li {
+    display:inline-block;
+}
+.social-icons img {
+    display: block;
     margin-left: 8px;
     margin-right: 8px;
-		width: 20px;
-	}
-
-
-#menu li {
-	margin: 10px;
-	color: #ff0000;
-}
-#menu li.active{
-	color: #fff;
-}
-#menu li a{
-	text-decoration:none;
-	color: #ff0000;
-}
-#menu li.active a:hover{
-	color: #000;
-}
-#menu li a,
-#menu li.active a{
-	padding: 9px 18px;
-	display:block;
-}
-#menu li.active a{
-	color: #fff;
-}
-#menu{
-	position:fixed;
-	top:0;
-	left:0;
-	height: 40px;
-	z-index: 70;
-	width: 50px;
-	padding: 0;
-	margin-top: 400px;
-	font-size: 15px;
-	font-weight: bold;
+    width: 20px;
 }
 
-.shape {
-  height: 150px;
-  width: 150px;
-  background-color: #0074d9;
-  border-radius: 80px;
-  margin-bottom: 30px;
-  float: left;
-  margin-right: 20px;
+#menu {
+    animation: fade 16s;
 }
-#square {
-	width: 100px;
-	height: 100px;
-	background: red;
-  animation: float 6s ease-in-out infinite;
-}
+
 /* Media Query for responsive design */
 @media(min-width:768px) {
     .jumbotron h1 {
@@ -184,6 +145,7 @@ span {
 
 }
 
+/* Floating Animation */
 @keyframes float {
 	0% {
 		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
