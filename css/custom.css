@@ -17,6 +17,7 @@ h4,
 h5,
 h6 {
     color: white;
+    
 }
 p {
     margin: 0 0 25px;
@@ -68,18 +69,28 @@ span {
     font-weight: 100;  
 }
 /* Projects Section Styling */
-.projects {
+.projects, .about {
     height: 100vh;
     text-align: center;
 }
-
-
-/* About Section Styling */
-.about {
-    height: 100vh;
-    text-align: center;
+.projects ul {
+    color: #FF7E1F;
+    list-style-type: none;
+    margin-top: 20px;
+	font-size: 15px;
+	font-weight: bold;
+    padding: 0;
+	text-align: center;
 }
-
+.about ul {
+    color: #FF7E1F;
+    list-style-type: none;
+    margin-top: 20px;
+	font-size: 15px;
+	font-weight: bold;
+    padding: 0;
+	text-align: center;
+}
 
 @-webkit-keyframes fade{
   from{
@@ -104,7 +115,7 @@ span {
 .social-icons {
     text-align: center;
     /*animation: float 6s ease-in-out infinite;*/
-    animation: fade 10s;
+    animation: fade 6s;
 }
 .social-icons ul{
     list-style: none;
@@ -122,7 +133,7 @@ span {
 }
 
 #menu {
-    animation: fade 16s;
+    animation: fade 10s;
 }
 
 /* Media Query for responsive design */
