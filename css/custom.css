@@ -34,6 +34,7 @@ span {
 /* Jumbotron Stylings */
 .jumbotron {
     display: flex;
+    text-align: center;
     background-color: transparent;
     background: none;
     height: 100vh;
@@ -65,7 +66,9 @@ span {
     font-weight: 100;  
 }
 .jumbotron img {
-    width: 100px;
+    width: 200px;
+    display: block;
+    margin: auto;
 }
 /* Projects Section Styling */
 .projects, .about {
@@ -141,17 +144,13 @@ span {
         font-size:60px;
     }
     .jumbotron h4 {
-      font-size: 15px;
-        text-align: center;
-        
+      font-size: 15px;        
     }
     .jumbotron ul {
         font-size: 25px;
     }
     .jumbotron img {
         width: 500px;
-        display: block;
-        margin: auto;
     }
     .social-icons img {
       width: 35px;
