@@ -3,7 +3,7 @@ body {
     width: 100%;
     min-height: 100%;
     font-family: "Helvetica-Neue",Helvetica,sans-serif;
-    background-color: #0C0809;
+    background-color: #FFFFFF;
     margin: 0;
 }
 html {
@@ -47,21 +47,19 @@ span {
     letter-spacing: 0px;
     margin: 0px;
     animation: fade 4s;
-    position: relative;
     top: 60px;
     z-index: 1;
-    color: white;
+    color: black;
 }
 .jumbotron h4 {
     font-size: 10px;
-    animation: fade 6s;
-    position: relative;
+    animation: fade 10s;
     z-index: 1;
     top: -150px;
+    color: black;
 }
 .jumbotron h3 {
     font-size: 15px;
-    position: relative;
     color: green;
 }
 .jumbotron ul {
