@@ -1,11 +1,10 @@
 # Noelkire.github.io
 
-Personal Portfolio showcasing several uses of webtechnologies.
+Personal website.
 
-Examples of technologies being used or implemented are:
--Javascript
--Bootstrap
--HTML5
--CSS3 (webkit animations)
--Apple Pay API on web
--Online shop and cart
+Stuff I may put into website:
+-Coding
+-Tech stuff
+-Drawing/Vector
+-Photography
+-3D Modeling

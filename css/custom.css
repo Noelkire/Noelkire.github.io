@@ -64,8 +64,7 @@ span {
 }
 .jumbotron ul {
     list-style-type: none;
-    margin-top: 20px;
-	font-size: 15px;
+    margin-top: -5px;
 	font-weight: bold;
     padding: 0;
 	text-align: center;
@@ -82,29 +81,6 @@ span {
     opacity: 0.5;
 }
 /* Projects Section Styling */
-.projects, .about {
-    height: 100vh;
-    text-align: center;
-}
-.projects ul {
-    color: #FF7E1F;
-    list-style-type: none;
-    margin-top: 20px;
-	font-size: 15px;
-	font-weight: bold;
-    padding: 0;
-	text-align: center;
-}
-.about ul {
-    color: #FF7E1F;
-    list-style-type: none;
-    margin-top: 20px;
-	font-size: 15px;
-	font-weight: bold;
-    padding: 0;
-	text-align: center;
-}
-
 @-webkit-keyframes fade{
   from{
     /*top:50px;*/
@@ -148,12 +124,20 @@ span {
 #menu {
     animation: fade 10s;
 }
+#menu ul {
+    list-style: none;
+}
+#menu li {
+    display: inline-block;
+    font-size: 10pt;
+}
 
 /* Media Query for responsive design */
 @media(min-width:768px) {
     .jumbotron h1 {
         font-size:60px;
         top: 150px;
+        animation: float 4s infinite;
     }
     .jumbotron h3 {
       font-size: 20px;
@@ -162,18 +146,17 @@ span {
       font-size: 15px;
         top: -220px;
     }
-    .jumbotron ul {
-        font-size: 25px;
-    }
     .jumbotron img {
         width: 500px;
     }
     .social-icons img {
       width: 35px;
     }
-
+    #menu li {
+        font-size: 12pt;
+        padding: 10pt;
+    }
 }
-
 /* Floating Animation */
 @keyframes float {
 	0% {
@@ -182,7 +165,7 @@ span {
 	}
 	50% {
 		/*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
-		transform: translatey(-20px);
+		transform: translatey(-10px);
 	}
 	100% {
 		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
