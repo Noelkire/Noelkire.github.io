@@ -87,7 +87,6 @@ p {
 /* Light and Dark Mode Scheme */
 .night { 
     background-color: rgb(28, 28, 30);
-    color:  
 }
 @media (prefers-color-scheme: light) {
     .night.light-scheme {
@@ -115,7 +114,7 @@ p {
 		transform: translatey(0px);
 	}
 }
-@-webkit-keyframes fade{
+@keyframes fade{
     from{
       /*top:50px;*/
       opacity:0;
