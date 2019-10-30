@@ -3,7 +3,6 @@ body {
     width: 100%;
     min-height: 100%;
     font-family: "Helvetica-Neue",Helvetica,sans-serif;
-    background-color: #FFFFFF;
     margin: 0;
 }
 html {
@@ -16,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: white;
+    color: rgb(142, 142, 147);
     
 }
 p {
@@ -24,14 +23,7 @@ p {
     font-size: 18px;
     line-height: 1.5;
 }
-/* Underline 
-span {
-    border-bottom: 2px solid white;
-}
-
-*/
-
-/* Jumbotron Stylings */
+/* Jumbotron Styling */
 .jumbotron {
     display: flex;
     text-align: center;
@@ -42,102 +34,44 @@ span {
     margin-top: 200px;
 }
 .jumbotron h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     letter-spacing: 0px;
     margin: 0px;
     animation: fade 4s;
-    top: 60px;
+    top: 10px;
     z-index: 1;
-    color: black;
-}
-.jumbotron h4 {
-    font-size: 10px;
-    animation: fade 10s;
-    z-index: 1;
-    top: -150px;
-    color: black;
-}
-.jumbotron h3 {
-    font-size: 15px;
-    color: green;
+    color: rgb(142, 142, 147);
 }
 .jumbotron ul {
     list-style-type: none;
-    margin-top: -5px;
-	font-weight: bold;
-    padding: 0;
+    font-weight: bold;
+    padding: 0px;
 	text-align: center;
 }
 .jumbotron a {
     color: #FF7E1F;
     font-weight: 100;  
 }
-.jumbotron img {
-    width: 300px;
-    position: relative;
-    display: block;
-    margin: auto;
-    opacity: 0.5;
-}
-/* Projects Section Styling */
-@-webkit-keyframes fade{
-  from{
-    /*top:50px;*/
-    opacity:0;
-  }
-  to{
-   /* top:0px;*/
-    opacity:1;
-  }
-}
-
-.thumbnail {
-	background-color: transparent;
-  line-height: 1.42857143;
-  border: 2px solid transparent;
-	margin: 20px;
-  -webkit-transition: border .2s ease-in-out;
-       -o-transition: border .2s ease-in-out;
-          transition: border .2s ease-in-out;
-}
-.social-icons {
-    text-align: center;
-    /*animation: float 6s ease-in-out infinite;*/
-    animation: fade 6s;
-}
-.social-icons ul{
-    list-style: none;
-    margin:15px;
-    padding: 0;
-}
-.social-icons li {
-    display:inline-block;
-}
-.social-icons img {
-    display: block;
-    margin-left: 8px;
-    margin-right: 8px;
-    width: 20px;
-}
-
+/* Menu Styling */
 #menu {
-    animation: fade 10s;
+    animation: fade 6s;
 }
 #menu ul {
     list-style: none;
 }
 #menu li {
     display: inline-block;
-    font-size: 10pt;
+    font-size: 11pt;
+    color: rgb(142, 142, 147);
 }
-
 /* Media Query for responsive design */
+/* Normal Size Screen */
 @media(min-width:768px) {
     .jumbotron h1 {
         font-size:60px;
         top: 150px;
-        animation: float 4s infinite;
+        animation: fade 4s;
     }
     .jumbotron h3 {
       font-size: 20px;
@@ -146,18 +80,27 @@ span {
       font-size: 15px;
         top: -220px;
     }
-    .jumbotron img {
-        width: 500px;
-    }
-    .social-icons img {
-      width: 35px;
-    }
     #menu li {
         font-size: 12pt;
-        padding: 10pt;
     }
 }
-/* Floating Animation */
+/* Light and Dark Mode Scheme */
+.night { 
+    background-color: rgb(28, 28, 30);
+    color:  
+}
+@media (prefers-color-scheme: light) {
+    .night.light-scheme {
+        background-color: rgb(236, 236, 236);
+    }
+    .jumbotron h1 {
+        color: rgb(28, 28, 30);
+    }
+    #menu li {
+        color: rgb(28, 28, 30);
+    }
+}
+/* Keyframes Animations */
 @keyframes float {
 	0% {
 		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
@@ -165,10 +108,20 @@ span {
 	}
 	50% {
 		/*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
-		transform: translatey(-10px);
+		transform: translatey(-8px);
 	}
 	100% {
 		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
 		transform: translatey(0px);
 	}
 }
+@-webkit-keyframes fade{
+    from{
+      /*top:50px;*/
+      opacity:0;
+    }
+    to{
+     /* top:0px;*/
+      opacity:1;
+    }
+  }
