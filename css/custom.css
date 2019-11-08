@@ -25,7 +25,7 @@ p {
     margin-top: 300px;
 }
 .jumbotron h1 {
-    font-size: 52px;
+    font-size: 45px;
     font-weight: bold;
     letter-spacing: 10px;
     margin: 0px;
@@ -51,18 +51,18 @@ p {
     list-style: none;
 }
 #menu li {
-    font-size: 25px;
+    font-size: 15px;
 }
 /* Media Query for responsive design */
 /* Normal Size Screen */
 @media(min-width:768px) {
     .jumbotron h1 {
-        font-size:25px;
+        font-size:60px;
         top: 150px;
         animation: fade 4s;
     }
     #menu li {
-        font-size: 25pt;
+        font-size: 20px;
     }
 }
 /* Light and Dark Mode Scheme */
