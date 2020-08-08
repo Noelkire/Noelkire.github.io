@@ -1,4 +1,4 @@
-/* General Global Styling */
+/* General/Global Styling */
 body {
     width: 100%;
     min-height: 100%;
@@ -108,10 +108,4 @@ p {
      /* top:0px;*/
       opacity:1;
     }
-  }
-  /*3D CSS*/
-  #scene-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
   }
