@@ -1,11 +1,16 @@
+/*NOTE TO FUTURE ERIK, GET RID OF THE JUMBOTRON NO NEED FOR IT */
 /* General/Global Styling */
 body {
     width: 100%;
     min-height: 100%;
-    font-family: "Open Sans",sans-serif;
+    font-family: 'Inconsolata', monospace;
     margin: 0;
 }
 html {
+    width: 100%;
+    height: 100%;
+}
+canvas {
     width: 100%;
     height: 100%;
 }
@@ -14,89 +19,72 @@ p {
     font-size: 18px;
     line-height: 1.5;
 }
-/* Jumbotron Styling */
-.jumbotron {
-    display: flex;
+.center {
+    position: fixed;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.statuscontainer {
+    position: fixed;
+    width: 70%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.status {
+    color: white;
     text-align: center;
-    background-color: transparent;
-    background: none;
-    height: 100vh;
-    overflow: hidden;
-    margin-top: 300px;
-}
-.jumbotron h3 {
-    font-size: 30px;
-    margin: 0px;
-    top: 10px;
-    z-index: 1;
-}
-.container {
-    text-align: center;
-}
-#herocontainer {
-    text-align: left;
-    display: inline-block;
-}
-.jumbotron ul {
-    list-style-type: none;
-    font-weight: bold;
-    padding: 0px;
-	text-align: center;
-}
-.something a {
-    font-weight: bold;
-}
-/* Menu Styling */
-#menu {
-    animation: fade 6s;
-}
-#menu ul {
-    list-style: none;
-}
-#menu li {
     font-size: 15px;
 }
+#textincanvas {
+    position: absolute;
+    left: 425px;
+    top: 400px;
+    z-index: 1;
+}
+
 /* Media Query for responsive design */
 /* Normal Size Screen */
-@media(min-width:768px) {
-    .jumbotron h1 {
-        font-size:60px;
-        top: 150px;
+@media(max-width:768px) {
+    #status {
+        font-size:10px;
     }
-    #menu li {
-        font-size: 20px;
+    #namerender {
+        width: 120%;
     }
 }
 /* Light and Dark Mode Scheme */
 .night-scheme { 
-    background-color: rgb(28, 28, 30);
+    background-image: linear-gradient( #3D4A34,#0B0B0B);
     color: rgb(245, 245, 247);
 }
 .night-scheme a {
-    color: #BEF72C;
+    color: white;
 }
 @media (prefers-color-scheme: light) {
     .night-scheme.light-scheme {
-        background-color: rgb(245, 245, 247);
+        background-image: linear-gradient( #3D4A34,#0B0B0B);
         color: rgb(28, 28, 30);
     }
     .night-scheme.light-scheme a{
-        color: #FF7E1F;
+        color: black;
     }
 }
 /* Keyframes Animations */
 @keyframes float {
 	0% {
 		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-		transform: translatey(0px);
+		transform: translateZ(0px);
 	}
 	50% {
 		/*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
-		transform: translatey(-8px);
+		transform: translateZ(-8px);
 	}
 	100% {
 		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-		transform: translatey(0px);
+		transform: translateZ(0px);
 	}
 }
 @keyframes fade{
