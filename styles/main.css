@@ -67,6 +67,9 @@ p {
     background-image: linear-gradient( #FFFFFF,#F5D0F0);
     color: rgb(245, 245, 247);
 }
+.minaText {
+    color:  #05A89D;
+}
 @media (prefers-color-scheme: light) {
     .night-scheme.light-scheme {
         background-image: linear-gradient( #30481A,#0B0B0B);
