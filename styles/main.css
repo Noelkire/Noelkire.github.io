@@ -101,3 +101,13 @@ p {
       opacity:1;
     }
   }
+  /* Creating elements */
+  .roundedCard {
+  border-radius: 25px;
+  background: #FFFFFF;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;
+  color:  #000000;
+  font-weight: bold;
+}
