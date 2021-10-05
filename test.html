@@ -13,30 +13,36 @@
   <link href="styles/main.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="night-scheme light-scheme">
+<body class="proto-scheme">
     <!-- THREE.JS -->
-    <script src="js/three.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
     <div class="centerThree">
     <script>
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth/3, window.innerHeight /3);
+        document.body.appendChild( renderer.domElement );
 
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize( window.innerWidth/3, window.innerHeight /3);
-            document.body.appendChild( renderer.domElement );
+        const scene = new THREE.Scene();
 
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial( { wireframe: true, color: 0x00ff00 } );
-            const cube = new THREE.Mesh( geometry, material );
-            scene.add( cube );
+        const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+        const controls = new THREE.OrbitControls( camera, renderer.domElement );
 
-            camera.position.z = 5;
+        const geometry = new THREE.SphereGeometry(1,16,8);
+        const material = new THREE.MeshBasicMaterial( { wireframe: true ,color: 0x00ff00 } );
+        const sphere = new THREE.Mesh( geometry, material );
+        scene.add( sphere );
 
-            const animate = function () {
+        camera.position.z = 3;
+        controls.update();
+
+        const animate = function () {
                 requestAnimationFrame( animate );
+                controls.update();
 
-                cube.rotation.x += 0.02;
-                cube.rotation.y += 0.01;
+
+                sphere.rotation.x += 0.002;
+                sphere.rotation.y += 0.001;
 
                 renderer.render( scene, camera );
             };
@@ -44,19 +50,14 @@
             animate();
     </script>
     </div>
-    <div>
-        <a href="resources/AR_Initials.reality"><img class='center' src="resources/greennamerender.png"></a>
-        <div class='status statuscontainer'>
-            <div>coming soon.</div>
+    <div class='status statuscontainer'>
             <div>erik leon</div>
-            <div>always working on <u>something</u></div>
+            <div>3D Maker🛰️</div>
         </div>
-    </div>
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
 <!-- Custom Theme JavaScript -->
-<script src="js/three.js"></script>
 </body>
 </html>
