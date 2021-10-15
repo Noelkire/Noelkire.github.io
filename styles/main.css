@@ -12,8 +12,12 @@ html {
     height: 100%;
 }
 canvas {
-    margin: auto;
-    transform:  translate(0%,100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 10%;
 }
 p {
     margin: 0 0 25px;
@@ -23,9 +27,15 @@ p {
 a:hover {
   text-decoration: none;
 }
+h1 {
+    bottom: 110px;
+    font-size: 100pt;
+    color: white;
+    z-index: 1;
+}
 .center {
     position: fixed;
-    width: 70%;
+    width: 10%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -45,10 +55,10 @@ a:hover {
     font-weight: bold;
 }
 #textincanvas {
-    position: absolute;
+    position: fixedœ;
     left: 425px;
     top: 400px;
-    z-index: 1;
+    z-index: 999;
 }
 
 /* Media Query for responsive design */

@@ -15,28 +15,31 @@
 </head>
 <body class="night-scheme light-scheme">
     <!-- THREE.JS -->
-    <script src="js/three.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+
     <div class="centerThree">
     <script>
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize( window.innerWidth/3, window.innerHeight /3);
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
+            renderer.setClearColor(0x000000, 0.0);
+            renderer.setSize( window.innerWidth, window.innerHeight );
             document.body.appendChild( renderer.domElement );
 
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial( { wireframe: true, color: 0x00ff00 } );
-            const cube = new THREE.Mesh( geometry, material );
-            scene.add( cube );
+            const controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+            const geometry1 = new THREE.SphereGeometry(1,16,8);
+            const material1 = new THREE.MeshBasicMaterial( { wireframe: true ,color: 0x00ff00 } );
+            const sphere = new THREE.Mesh( geometry1, material1 );
+            scene.add( sphere );
 
             camera.position.z = 5;
 
             const animate = function () {
                 requestAnimationFrame( animate );
-
-                cube.rotation.x += 0.02;
-                cube.rotation.y += 0.01;
+                controls.update();
 
                 renderer.render( scene, camera );
             };
@@ -45,7 +48,7 @@
     </script>
     </div>
     <div>
-        <a href="resources/AR_Initials.reality"><img class='center' src="resources/greennamerender.png"></a>
+        <img class='center' src="resources/greennamerender2.png">
         <div class='status statuscontainer'>
             <div>coming soon.</div>
             <div>erik leon</div>
