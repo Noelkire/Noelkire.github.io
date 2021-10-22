@@ -31,12 +31,14 @@
 
             const controls = new THREE.OrbitControls( camera, renderer.domElement );
 
-            const loader = new THREE.GLTFLoader();
+/*
+            //const loader = new THREE.GLTFLoader();
 
-            loader.load(
+           // loader.load(
     // resource URL
     'resources/RoomModel.glb',
     // called when the resource is loaded
+
     function ( gltf ) {
 
         gltf.scene.traverse( function( node ) {
@@ -46,13 +48,13 @@
     } );
         scene.add( gltf.scene );
         scene.add( gltf.asset );
-/*
+
         gltf.animations; // Array<THREE.AnimationClip>
         gltf.scene; // THREE.Group
         gltf.scenes; // Array<THREE.Group>
         gltf.cameras; // Array<THREE.Camera>
         gltf.asset; // Object
-        */
+
 
     },
     // called while loading is progressing
@@ -68,14 +70,17 @@
 
     }
 );
+*/
 
-            scene.add( new THREE.AxesHelper( 1.5 ));
+            scene.add( new THREE.AxesHelper( 10 ));
 
-            const light = new THREE.AmbientLight( { color: 0x404040,intensity: 3 } ); // soft white light
-            scene.add( light );
 
-            const geometry1 = new THREE.SphereGeometry(2,16,8);
-            const material1 = new THREE.MeshBasicMaterial( { wireframe: true ,color: 0xFFFFFF } );
+            const light2 = new THREE.PointLight( 0xFFFFFF, 5, 100 );
+light2.position.set( 50, 50, 50 );
+scene.add( light2 );
+
+            const geometry1 = new THREE.SphereGeometry(1,16,8);
+            const material1 = new THREE.MeshStandardMaterial( { wireframe: false ,color: 0xFFFFFF } );
             const sphere = new THREE.Mesh( geometry1, material1 );
             scene.add( sphere );
 
