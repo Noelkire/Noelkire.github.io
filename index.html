@@ -63,6 +63,8 @@
 
     }
 );
+            const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+            scene.add( light );
 
             const geometry1 = new THREE.SphereGeometry(1,16,8);
             const material1 = new THREE.MeshBasicMaterial( { wireframe: true ,color: 0x00ff00 } );
