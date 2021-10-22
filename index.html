@@ -69,17 +69,19 @@
     }
 );
 
-            scene.add( new THREE.AxesHelper(500));
-            
+            scene.add( new THREE.AxesHelper( 1.5 ));
+
             const light = new THREE.AmbientLight( { color: 0x404040,intensity: 3 } ); // soft white light
             scene.add( light );
 
-            const geometry1 = new THREE.SphereGeometry(1,16,8);
-            const material1 = new THREE.MeshBasicMaterial( { wireframe: true ,color: 0x00ff00 } );
+            const geometry1 = new THREE.SphereGeometry(2,16,8);
+            const material1 = new THREE.MeshBasicMaterial( { wireframe: true ,color: 0xFFFFFF } );
             const sphere = new THREE.Mesh( geometry1, material1 );
             scene.add( sphere );
 
             camera.position.z = 5;
+            camera.position.x = 4;
+            camera.position.y = 3;
 
             const animate = function () {
                 requestAnimationFrame( animate );

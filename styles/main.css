@@ -73,7 +73,7 @@ h1 {
 }
 /* Light and Dark Mode Scheme */
 .night-scheme { 
-    background-color: orange;
+    background-color: gray;
     color: rgb(245, 245, 247);
 }
 .night-scheme a {
