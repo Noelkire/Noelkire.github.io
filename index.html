@@ -42,7 +42,7 @@
         gltf.scene.traverse( function( node ) {
 
         if ( node.isMesh ) { node.castShadow = true; }
-
+        if ( node.isMesh ) { node.receiveShadow = true; }
     } );
         scene.add( gltf.scene );
         scene.add( gltf.asset );
