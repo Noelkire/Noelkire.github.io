@@ -2,22 +2,22 @@
 /* General/Global Styling */
 body {
     width: 100%;
-    min-height: 100%;
     font-family: 'Inconsolata', monospace;
     margin: 0;
-    background-color: black;
+    background-color: #EDFFC8;
+    color: black;
+    text-align: center;
 }
 html {
     width: 100%;
     height: 100%;
 }
 canvas {
-    position: absolute;
+    position:relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    width: 10%;
 }
 p {
     margin: 0 0 25px;
@@ -28,39 +28,24 @@ a:hover {
   text-decoration: none;
 }
 h1 {
-    bottom: 110px;
-    font-size: 100pt;
-    color: white;
+    font-size: 50pt;
+    font-weight: 200;
+}
+h2 {
+    font-size: 20pt;
+    font-weight: 400;
+}
+#textOverCanvas {
     z-index: 1;
 }
-.center {
-    position: fixed;
-    width: 10%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.statuscontainer {
-    position: fixed;
-    width: 70%;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+ul,li{
+    list-style: none;
 }
 .status {
-    color: white;
-    z-index: 1;
     text-align: center;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 200;
 }
-#textincanvas {
-    position: fixedœ;
-    left: 425px;
-    top: 400px;
-    z-index: 999;
-}
-
 /* Media Query for responsive design */
 /* Normal Size Screen */
 @media(max-width:768px) {
@@ -72,13 +57,7 @@ h1 {
     }
 }
 /* Light and Dark Mode Scheme */
-.night-scheme { 
-    background-color: gray;
-    color: rgb(245, 245, 247);
-}
-.night-scheme a {
-    color: white;
-}
+/*night-scheme and light-schme*/
 .mina-scheme {
     background-image: linear-gradient( #FFFFFF,#F5D0F0);
     color: rgb(245, 245, 247);
@@ -86,50 +65,8 @@ h1 {
 .minaText {
     color:  #05A89D;
 }
-.proto-scheme {
-    background-color: black;
-}
 @media (prefers-color-scheme: light) {
     .night-scheme.light-scheme {
-        background-image: linear-gradient( #30481A,#0B0B0B);
         color: rgb(28, 28, 30);
     }
-    .night-scheme.light-scheme a{
-        color: black;
-    }
-}
-/* Keyframes Animations */
-@keyframes float {
-	0% {
-		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-		transform: translateZ(0px);
-	}
-	50% {
-		/*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
-		transform: translateZ(-8px);
-	}
-	100% {
-		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-		transform: translateZ(0px);
-	}
-}
-@keyframes fade{
-    from{
-      /*top:50px;*/
-      opacity:0;
-    }
-    to{
-     /* top:0px;*/
-      opacity:1;
-    }
-  }
-  /* Creating elements */
-  .roundedCard {
-  border-radius: 25px;
-  background: #FFFFFF;
-  padding: 20px; 
-  width: 200px;
-  height: 150px;
-  color:  #000000;
-  font-weight: bold;
 }

@@ -19,92 +19,104 @@
     <script src="js/OrbitControls.js"></script>
     <script src="js/GLTFLoader.js"></script>
 
-    <div class="centerThree">
-    <script>
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    <div class="container">
+            <script>
+                    const scene = new THREE.Scene();
+                    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
-            renderer.setClearColor(0x000000, 0.0);
-            renderer.setSize( window.innerWidth, window.innerHeight );
-            document.body.appendChild( renderer.domElement );
+                    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
+                    renderer.setClearColor(0x000000, 0.0);
+                    renderer.setSize( window.innerWidth, window.innerHeight );
+                    document.body.appendChild( renderer.domElement );
 
-            const controls = new THREE.OrbitControls( camera, renderer.domElement );
+                    const controls = new THREE.OrbitControls( camera, renderer.domElement );
+                    controls.enableDamping = true;
+                    controls.autoRotate  = true;
+                    controls.enablePan = false;
+                    controls.enableZoom = false;
 
-/*
-            //const loader = new THREE.GLTFLoader();
+                    const lightOne = new THREE.PointLight( 0xFFFFFF, 1.5, 100 );
+                    lightOne.position.set( 25, 25, 25 );
+                    scene.add( lightOne );
+                    
+                    const lightTwo = new THREE.PointLight( 0xFFFFFF, 1.5, 100 );
+                    lightTwo.position.set( -25, -25, 25 );
+                    scene.add( lightTwo );
 
-           // loader.load(
-    // resource URL
-    'resources/RoomModel.glb',
-    // called when the resource is loaded
+                    const lightThree = new THREE.PointLight( 0xFFFFFF, 1.5, 100 );
+                    lightThree.position.set( 0, 0, -25 );
+                    scene.add( lightThree );
 
-    function ( gltf ) {
+                    const geoSphere = new THREE.SphereGeometry(1,32,32);
+                    const sphereMaterial = new THREE.MeshStandardMaterial( { wireframe: false ,color: 0x94B6C6 } );
+                    sphereMaterial.roughness = 1.0;
+                    const sphere = new THREE.Mesh( geoSphere, sphereMaterial );
+                    sphere.position.set(0,0,2)
+                    scene.add( sphere );
 
-        gltf.scene.traverse( function( node ) {
+                    const geoBox = new THREE.BoxGeometry(2,2,2);
+                    const boxMaterial = new THREE.MeshStandardMaterial( { wireframe: false ,color: 0x94B6C6 } );
+                    boxMaterial.roughness = 1.0;
+                    const box = new THREE.Mesh( geoBox, boxMaterial );
+                    box.position.set( 2,4,2)
+                    scene.add( box );
 
-        if ( node.isMesh ) { node.castShadow = true; }
-        if ( node.isMesh ) { node.receiveShadow = true; }
-    } );
-        scene.add( gltf.scene );
-        scene.add( gltf.asset );
+                    const geoCone = new THREE.ConeGeometry( 1, 2, 32 );
+                    const coneMaterial = new THREE.MeshStandardMaterial( { wireframe: false ,color: 0x94B6C6 } );
+                    coneMaterial.roughness = 1.0;
+                    const cone = new THREE.Mesh( geoCone, coneMaterial );
+                    cone.position.set( 3,-1,-2)
+                    scene.add( cone );
 
-        gltf.animations; // Array<THREE.AnimationClip>
-        gltf.scene; // THREE.Group
-        gltf.scenes; // Array<THREE.Group>
-        gltf.cameras; // Array<THREE.Camera>
-        gltf.asset; // Object
+                    camera.position.z = 1;
+                    camera.position.x = 10;
+                    camera.position.y = 5;
 
+                    const animate = function () {
+                        requestAnimationFrame( animate );
+                        controls.update();
 
-    },
-    // called while loading is progressing
-    function ( xhr ) {
+                        renderer.render( scene, camera );
+                    };
 
-        console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-    },
-    // called when loading has errors
-    function ( error ) {
-
-        console.log( 'An error happened' );
-
-    }
-);
-*/
-
-            scene.add( new THREE.AxesHelper( 10 ));
-
-
-            const light2 = new THREE.PointLight( 0xFFFFFF, 5, 100 );
-light2.position.set( 50, 50, 50 );
-scene.add( light2 );
-
-            const geometry1 = new THREE.SphereGeometry(1,16,8);
-            const material1 = new THREE.MeshStandardMaterial( { wireframe: false ,color: 0xFFFFFF } );
-            const sphere = new THREE.Mesh( geometry1, material1 );
-            scene.add( sphere );
-
-            camera.position.z = 5;
-            camera.position.x = 4;
-            camera.position.y = 3;
-
-            const animate = function () {
-                requestAnimationFrame( animate );
-                controls.update();
-
-                renderer.render( scene, camera );
-            };
-
-            animate();
-    </script>
-    </div>
-    <div>
-        <img class='center' src="resources/greennamerender2.png">
-        <div class='status statuscontainer'>
-            <div>coming soon.</div>
-            <div>erik leon</div>
-            <div>always working on <u>something</u></div>
-        </div>
+                    animate();
+            </script>
+            <div class="textCenter">
+            <div class='row h-100'>
+                <div class="col-sm-12 align-self-center" id="textOverCanvas">
+                    <h1>erik leon</h1>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col-sm align-self-center" id="textOverCanvas">
+                    <a href="http://twitter.com/_noelkire">twitter</a>
+                    <a href="http://instagram.com/dymncion">instagram</a>
+                    <a href="http://github.com/noelkire">github</a>
+                    <a href="http://linkedin.com/noelkire">linkedin</a>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 align-self-center" id="textOverCanvas">
+                  <h2>Projects</h2>
+                  <ul>
+                    <li>RealityBox (uploading soon)</li>
+                    <li>Mancala (uploading soon)</li>
+                    <li>ARHelper (uploading soon)</li>
+                </ul>
+              </div>
+              <div class="col-sm-6 align-self-center" id="textOverCanvas">
+                  <h2>Guides</h2>
+                  <ul>
+                    <li>SwiftUI (uploading soon)</li>
+                    <li>ARKit (uploading soon)</li>
+                    <li>RealityKit (uploading soon)</li>
+                    <li>Blender</li>
+                    <li>Xcode</li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </div>
     </div>
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
