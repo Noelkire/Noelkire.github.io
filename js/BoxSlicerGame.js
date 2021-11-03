@@ -45,7 +45,6 @@ function init() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.render(scene, camera);
-
     document.body.appendChild(renderer.domElement);
 }
 
@@ -91,25 +90,29 @@ window.addEventListener("click", () => {
         const newDepth = topLayer.depth;
         const nextDirection = direction == "x" ? "z" : "x";
         addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
-
     }
 });
-
 function animation() {
-    const speed = 0.15;
+    let speed = 0.18;
+    score = stack.length - 1
 
     const topLayer = stack[stack.length - 1];
 
-    if(topLayer.threejs.position[topLayer.direction] == 10) {
-        topLayer.threejs.position[topLayer.direction] = 0;
-    } else {
-        topLayer.threejs.position[topLayer.direction] += speed;
-    }
+    topLayer.threejs.position[topLayer.direction] += speed;
 
+    document.getElementById("score").innerHTML = `Score: ${score}`;
+    if (topLayer.threejs.position.y >= 50) {
+        document.getElementById("message").innerHTML = "oh nice..."
+    }
+    if (topLayer.threejs.position.y >= 100) {
+        document.getElementById("message").innerHTML = "so big...";
+    }
     if (camera.position.y < boxHeight * (stack.length - 2) + 6) {
         camera.position.y += speed;
     }
+
+    document.getElementById("boxposition").innerHTML = `x/z: ${topLayer.threejs.position[topLayer.direction].toFixed(0)} y: ${topLayer.threejs.position.y.toFixed(0)}`;
+    document.getElementById("boxdirection").innerHTML = `Direction: ${topLayer.direction}`;
+
     renderer.render(scene, camera);
-    score = stack.length - 1
-    document.getElementById("scoreTrack").innerHTML = score;
 }

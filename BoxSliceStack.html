@@ -20,11 +20,11 @@
         background-color: #BAB86C;
     }
 
-    #scoreTrack {
+    .debugger {
         position: fixed;
         top: 50%;
         right: 10%;
-        font-size: 100px;
+        font-size: 20px;
         z-index: 1;
         color: white;
     }
@@ -37,7 +37,14 @@
     <script src="js/GLTFLoader.js"></script>
     <script src="js/BoxSlicerGame.js"></script>
 
-    <h1 id="scoreTrack">0</h1>
+    <div class="debugger">
+        <h3>Debug</h3>
+                <div id="score"></div>
+                <div id="message"></div>
+                <div id="boxposition"></div>
+                <div id="boxdirection"></div>
+                <div id="bounceback"></div>
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
