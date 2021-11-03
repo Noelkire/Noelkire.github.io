@@ -91,8 +91,7 @@ window.addEventListener("click", () => {
         const newDepth = topLayer.depth;
         const nextDirection = direction == "x" ? "z" : "x";
         addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
-        
-        score += 1
+
     }
 });
 
@@ -111,5 +110,6 @@ function animation() {
         camera.position.y += speed;
     }
     renderer.render(scene, camera);
+    score = stack.length - 1
     document.getElementById("scoreTrack").innerHTML = score;
 }
