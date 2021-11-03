@@ -4,6 +4,7 @@ let scene, camera, renderer
 const boxHeight = 1;
 const originalBoxsize = 3;
 let stack;
+let score = 1;
 
 init();
 
@@ -43,8 +44,8 @@ function init() {
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setAnimationLoop(animation);
     renderer.render(scene, camera);
+
     document.body.appendChild(renderer.domElement);
 }
 
@@ -90,6 +91,8 @@ window.addEventListener("click", () => {
         const newDepth = topLayer.depth;
         const nextDirection = direction == "x" ? "z" : "x";
         addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
+        
+        score += 1
     }
 });
 
@@ -97,11 +100,16 @@ function animation() {
     const speed = 0.15;
 
     const topLayer = stack[stack.length - 1];
-    topLayer.threejs.position[topLayer.direction] += speed;
+
+    if(topLayer.threejs.position[topLayer.direction] == 10) {
+        topLayer.threejs.position[topLayer.direction] = 0;
+    } else {
+        topLayer.threejs.position[topLayer.direction] += speed;
+    }
 
     if (camera.position.y < boxHeight * (stack.length - 2) + 6) {
         camera.position.y += speed;
     }
     renderer.render(scene, camera);
-
+    document.getElementById("scoreTrack").innerHTML = score;
 }
