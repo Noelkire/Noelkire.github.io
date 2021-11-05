@@ -98,7 +98,7 @@ function animation() {
     score = stack.length - 1;
     const topLayer = stack[stack.length - 1];
 
-    if(topLayer.threejs.position[topLayer.direction] > 10) {
+    if(topLayer.threejs.position[topLayer.direction] > 8) {
         collision = true;
     }
 
