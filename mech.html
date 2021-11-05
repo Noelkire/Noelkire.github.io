@@ -38,11 +38,11 @@
         controls.enableZoom = true;
 
         const lightThree = new THREE.PointLight(0xFFFFFF, 1.5, 100);
-        lightThree.position.set(0, 0, 3);
+        lightThree.position.set(0, 5, 5);
         scene.add(lightThree);
-
-        const ambientLight = new THREE.AmbientLight(0xfffffff, 1.0);
-scene.add(ambientLight);
+        const lightTWo = new THREE.PointLight(0xFFFFFF, 1.5, 100);
+        lightTWo.position.set(0, -5, -5);
+        scene.add(lightTWo);
 
         /*
         const geoSphere = new THREE.SphereGeometry(1, 32, 32);
@@ -54,13 +54,13 @@ scene.add(ambientLight);
         */
 
         camera.position.z = 0;
-        camera.position.x = 1;
+        camera.position.x = 10;
         camera.position.y = 0;
 
         const loader = new THREE.GLTFLoader();
 loader.load(
 	// resource URL
-	'../resources/gundam.glb',
+	'../resources/char.glb',
 	// called when the resource is loaded
 	function ( gltf ) {
 
