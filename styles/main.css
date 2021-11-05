@@ -49,11 +49,8 @@ ul,li{
 /* Media Query for responsive design */
 /* Normal Size Screen */
 @media(max-width:768px) {
-    #status {
-        font-size:10px;
-    }
-    #namerender {
-        width: 120%;
+    .debugger {
+        font-size:20px;
     }
 }
 /* Light and Dark Mode Scheme */
