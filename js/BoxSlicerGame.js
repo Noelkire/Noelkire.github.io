@@ -5,6 +5,7 @@ const boxHeight = 1;
 const originalBoxsize = 3;
 let stack;
 let score = 1;
+let speed, collision;
 
 init();
 
@@ -92,17 +93,28 @@ window.addEventListener("click", () => {
         addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
     }
 });
+collision = false;
 function animation() {
-    let speed = 0.18;
-    score = stack.length - 1
-
+    score = stack.length - 1;
     const topLayer = stack[stack.length - 1];
 
-    topLayer.threejs.position[topLayer.direction] += speed;
+    if(topLayer.threejs.position[topLayer.direction] > 10) {
+        collision = true;
+    }
 
+    if(topLayer.threejs.position[topLayer.direction] > 8 && collision == true) {
+        document.getElementById("message").innerHTML = "Collision";
+        collision = false;
+        speed = -0.18
+    } else if (topLayer.threejs.position[topLayer.direction] < -8 && collision == false)  {
+        document.getElementById("message").innerHTML = "None";
+        speed = 0.18;
+    }
+    topLayer.threejs.position[topLayer.direction] += speed;
+    
     document.getElementById("score").innerHTML = `Score: ${score}`;
     if (topLayer.threejs.position.y >= 50) {
-        document.getElementById("message").innerHTML = "oh nice..."
+        document.getElementById("message").innerHTML = "oh nice...";
     }
     if (topLayer.threejs.position.y >= 100) {
         document.getElementById("message").innerHTML = "so big...";
